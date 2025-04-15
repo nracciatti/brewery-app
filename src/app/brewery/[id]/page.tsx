@@ -13,9 +13,9 @@ async function getBreweryData(id: string) {
       address: "Havre 73, Juárez, Cuauhtémoc",
       phone: "4235-8766",
       images: [
-        "https://source.unsplash.com/random/400x300/?bar,interior",
-        "https://source.unsplash.com/random/400x300/?brewery,beer",
-        "https://source.unsplash.com/random/400x300/?pub,drinks",
+        "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&h=600&q=80",
       ],
       reviews: [
         {
@@ -47,9 +47,9 @@ async function getBreweryData(id: string) {
       address: "Reforma 222, Juárez, Cuauhtémoc",
       phone: "5512-3456",
       images: [
-        "https://source.unsplash.com/random/400x300/?craft,beer",
-        "https://source.unsplash.com/random/400x300/?bar,night",
-        "https://source.unsplash.com/random/400x300/?pub,food",
+        "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&h=600&q=80",
       ],
       reviews: [
         {
@@ -75,9 +75,9 @@ async function getBreweryData(id: string) {
       address: "Av. Santa Fe 3456, Palermo, Buenos Aires",
       phone: "4832-5678",
       images: [
-        "https://source.unsplash.com/random/400x300/?brewery,argentina",
-        "https://source.unsplash.com/random/400x300/?bar,buenosaires",
-        "https://source.unsplash.com/random/400x300/?pub,argentina",
+        "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&h=600&q=80",
       ],
       reviews: [
         {
@@ -102,9 +102,9 @@ async function getBreweryData(id: string) {
       address: "Defensa 1234, San Telmo, Buenos Aires",
       phone: "4300-9876",
       images: [
-        "https://source.unsplash.com/random/400x300/?santelmo,bar",
-        "https://source.unsplash.com/random/400x300/?argentina,pub",
-        "https://source.unsplash.com/random/400x300/?buenosaires,drinks",
+        "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&h=600&q=80",
+        "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&h=600&q=80",
       ],
       reviews: [
         {

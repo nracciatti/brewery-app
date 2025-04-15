@@ -74,6 +74,7 @@ const BreweryDetail: React.FC<BreweryDetailProps> = ({ brewery }) => {
           alt={`${brewery.name} - Imagen ${currentImageIndex + 1}`}
           fill
           className="object-cover"
+          quality={100}
         />
         <div className="absolute inset-0 flex justify-between items-center">
           <button
@@ -110,8 +111,8 @@ const BreweryDetail: React.FC<BreweryDetailProps> = ({ brewery }) => {
               <Image
                 src={review.avatar || "/placeholder.svg"}
                 alt={review.user}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 className="rounded-full"
               />
               <div className="flex-1">
