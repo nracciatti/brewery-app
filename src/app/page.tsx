@@ -1,7 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import HappyHourBanner from "@/components/ui/HappyHourbanner";
 import BreweryList from "@/components/brewery/BreweryList";
-import BuenosAiresBreweries from "@/components/brewery/BuenosAiresBreweries";
+import CaliforniaBreweries from "@/components/brewery/CaliforniaBreweries";
 
 export default function Home() {
   return (
@@ -18,12 +18,12 @@ export default function Home() {
             <hr className="border-gray-700 my-2" />
 
             <h2 className="text-2xl font-bold mt-4 mb-4">
-              Opciones en Buenos Aires
+              Opciones en California
             </h2>
             <div className="mb-16">
               {" "}
               {/* Espacio para evitar que el contenido quede detrás de la navegación */}
-              <BuenosAiresBreweries />
+              <CaliforniaBreweries />
             </div>
           </div>
         </div>
