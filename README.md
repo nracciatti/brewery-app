@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brewery App
 
-## Getting Started
+Aplicación web para explorar y descubrir cervecerías, desarrollada como parte de un ejercicio técnico utilizando Next.js, TypeScript y Tailwind CSS.
 
-First, run the development server:
+## 📋 Descripción
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Brewery App es una aplicación que permite a los usuarios explorar cervecerías y ver sus detalles. La aplicación incluye un sistema de autenticación de usuarios, navegación entre páginas, y una interfaz adaptable para dispositivos móviles y de escritorio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Características
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Exploración de cervecerías**: Listado de cervecerías con información básica
+- **Vista detallada**: Página individual para cada cervecería con información completa
+- **Autenticación de usuarios**: Registro e inicio de sesión
+- **Diseño responsive**: Adaptado para móviles y escritorio
+- **Navegación intuitiva**: Barra de navegación inferior
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologías utilizadas
 
-## Learn More
+- **React 18** (Biblioteca principal para la interfaz de usuario)
+- **Next.js 13+** (Framework React con App Router)
+- **TypeScript** (Tipado estático para JavaScript)
+- **Tailwind CSS** (Framework CSS utilitario)
+- **Supabase** (Autenticación y base de datos)
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Estructura del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+\`\`\`
+brewery-app/
+├── node_modules/ # Dependencias instaladas
+├── src/ # Código fuente principal
+│ ├── app/ # Rutas y páginas (Next.js App Router)
+│ │ ├── brewery/[id]/ # Página de detalle de cervecería
+│ │ │ └── page.tsx # Componente de página de detalle
+│ │ ├── login/ # Página de inicio de sesión
+│ │ │ └── page.tsx # Componente de página de login
+│ │ ├── register/ # Página de registro
+│ │ │ └── page.tsx # Componente de página de registro
+│ │ ├── globals.css # Estilos globales
+│ │ ├── layout.tsx # Layout principal
+│ │ └── page.tsx # Página principal
+│ ├── components/ # Componentes reutilizables de React
+│ │ ├── brewery/ # Componentes relacionados con cervecerías
+│ │ ├── layout/ # Componentes de estructura
+│ │ └── ui/ # Componentes de interfaz de usuario
+│ ├── contexts/ # Contextos de React
+│ │ └── AuthContext.tsx # Contexto de autenticación
+│ ├── lib/ # Utilidades y configuración
+│ │ └── supabase.ts # Cliente de Supabase
+│ ├── services/ # Servicios para lógica de negocio
+│ │ └── BreweryService.ts # Servicio para operaciones con cervecerías
+│ └── types/ # Definiciones de tipos TypeScript
+│ └── auth.ts # Tipos para autenticación
+├── .env.local # Variables de entorno (no incluido en git)
+├── .gitignore # Archivos ignorados por git
+├── eslint.config.mjs # Configuración de ESLint
+├── next-env.d.ts # Tipos para Next.js
+├── next.config.ts # Configuración de Next.js
+├── package-lock.json # Versiones exactas de dependencias
+├── package.json # Dependencias y scripts
+├── postcss.config.js # Configuración de PostCSS
+├── README.md # Este archivo
+├── tailwind.config.js # Configuración de Tailwind CSS
+└── tsconfig.json # Configuración de TypeScript
+\`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Instalación y configuración
 
-## Deploy on Vercel
+### Requisitos previos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js 16.8.0 o superior
+- npm o yarn
+- Cuenta en Supabase
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Pasos de instalación
+
+1. Clonar el repositorio:
+   \`\`\`bash
+   git clone https://github.com/tu-usuario/brewery-app.git
+   cd brewery-app
+   \`\`\`
+
+2. Instalar dependencias:
+   \`\`\`bash
+   npm install
+
+   # o
+
+   yarn install
+   \`\`\`
+
+3. Configurar variables de entorno:
+
+   - Crea un archivo `.env.local` en la raíz del proyecto
+   - Añade las siguientes variables:
+     \`\`\`
+     NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase
+     NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima_de_supabase
+     \`\`\`
+
+4. Configurar Supabase:
+
+   - Crea un proyecto en Supabase
+   - Habilita la autenticación por email
+   - Configura las opciones de autenticación según tus necesidades
+
+5. Iniciar el servidor de desarrollo:
+   \`\`\`bash
+   npm run dev
+
+   # o
+
+   yarn dev
+   \`\`\`
+
+6. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
+
+## 📝 Características de autenticación
+
+La aplicación utiliza Supabase para la autenticación de usuarios, con las siguientes características:
+
+- Registro de usuarios con email y contraseña
+- Inicio de sesión
+- Cierre de sesión
+
+### Configuración de autenticación en Supabase
+
+En el panel de Supabase, se han configurado las siguientes opciones:
+
+- **Email provider**: Habilitado
+- **Confirm email**: Habilitado (los usuarios deben confirmar su email)
+- **Secure email change**: Habilitado
+- **Minimum password length**: 6 caracteres
+- **Email OTP Expiration**: 86400 segundos (24 horas)
+
+## 🔍 API de cervecerías
+
+La aplicación utiliza la API pública de Open Brewery DB para obtener información sobre cervecerías:
+
+- Endpoint principal: `https://api.openbrewerydb.org/breweries`
+- Filtrado por estado: `https://api.openbrewerydb.org/breweries?by_state=california`
+- Detalles de cervecería: `https://api.openbrewerydb.org/breweries/{id}`
+
+### Validación de email
+
+Al registrar usuarios, pueden aparecer errores de validación de email. Para solucionarlo:
+
+- Asegúrate de usar un formato de email válido
+- Utiliza dominios comunes (gmail.com, outlook.com, etc.)
