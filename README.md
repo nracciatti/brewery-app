@@ -61,7 +61,7 @@ brewery-app/
 ├── README.md # Este archivo
 ├── tailwind.config.js # Configuración de Tailwind CSS
 └── tsconfig.json # Configuración de TypeScript
-\`\`\`
+\`\`
 
 ## 🔧 Instalación y configuración
 
