@@ -11,7 +11,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const { register } = useAuth();
@@ -19,10 +19,10 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setErrorMessage("");
 
     if (password !== confirmPassword) {
-      setError("Las contraseñas no coinciden");
+      setErrorMessage("Las contraseñas no coinciden");
       return;
     }
 
@@ -33,10 +33,10 @@ export default function RegisterPage() {
       if (result.success) {
         router.push("/");
       } else {
-        setError(result.error || "Error al registrarse");
+        setErrorMessage(result.error || "Error al registrarse");
       }
     } catch (err) {
-      setError("Ocurrió un error al registrarse");
+      setErrorMessage("Ocurrió un error al registrarse");
     } finally {
       setIsLoading(false);
     }
@@ -50,9 +50,9 @@ export default function RegisterPage() {
             Crear Cuenta
           </h1>
 
-          {error && (
+          {errorMessage && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-              {error}
+              {errorMessage}
             </div>
           )}
 

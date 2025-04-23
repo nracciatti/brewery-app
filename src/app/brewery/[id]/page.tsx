@@ -100,9 +100,15 @@ interface PageProps {
   params: {
     id: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function BreweryPage({ params }: PageProps) {
+export default async function BreweryPage({
+  params,
+}: {
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
   const brewery = await getBreweryData(params.id);
 
   if (!brewery) {

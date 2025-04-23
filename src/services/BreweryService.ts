@@ -8,6 +8,16 @@ export interface Brewery {
   imageUrl?: string;
 }
 
+// Interfaz para los datos que recibimos de la API
+interface BreweryApiResponse {
+  id: string;
+  name: string;
+  street: string | null;
+  city: string;
+  state_province: string;  
+  phone: string | null;
+}
+
 const BASE_URL = "https://api.openbrewerydb.org/v1/breweries";
 
 export async function getAllBreweries(): Promise<Brewery[]> {
@@ -20,12 +30,12 @@ export async function getAllBreweries(): Promise<Brewery[]> {
 
     const data = await response.json();
 
-    const breweries: Brewery[] = data.map((brewery: any) => ({
+    const breweries: Brewery[] = data.map((brewery: BreweryApiResponse) => ({
       id: brewery.id,
       name: brewery.name,
       street: brewery.street,
       city: brewery.city,
-      state: brewery.state,
+      state: brewery.state_province,
       phone: brewery.phone,
       imageUrl: `https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=240&h=240&q=80`,
     }));
@@ -49,12 +59,12 @@ export async function getBreweriesByCity(city: string): Promise<Brewery[]> {
 
     const data = await response.json();
 
-    const breweries: Brewery[] = data.map((brewery: any, index: number) => ({
+    const breweries: Brewery[] = data.map((brewery: BreweryApiResponse, index: number) => ({
       id: brewery.id,
       name: brewery.name,
       street: brewery.street,
       city: brewery.city,
-      state: brewery.state,
+      state: brewery.state_province,
       phone: brewery.phone,
       imageUrl: `https://images.unsplash.com/photo-${
         1559526324 + index
@@ -76,14 +86,14 @@ export async function getBreweryById(id: string): Promise<Brewery | null> {
       throw new Error(`Error: ${response.status}`);
     }
 
-    const brewery = await response.json();
+    const brewery: BreweryApiResponse = await response.json();
 
     return {
       id: brewery.id,
       name: brewery.name,
       street: brewery.street,
       city: brewery.city,
-      state_province: brewery.state,
+      state_province: brewery.state_province,
       phone: brewery.phone,
       imageUrl: `https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=240&h=240&q=80`,
     };

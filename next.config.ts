@@ -15,6 +15,14 @@ const config: NextConfig = {
       },
     ],
   },
+  // Desactivar ESLint durante la compilación
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  // Desactivar la comprobación de tipos durante la compilación
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default config;

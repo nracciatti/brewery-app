@@ -49,18 +49,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
   // Verificar sesión actual al cargar
   useEffect(() => {
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
-        setUser({
-          email: session.user.email || "",
-          user_metadata: session.user.user_metadata,
-        });
-      } else {
-        setUser(null);
+    const { subscription } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        if (session?.user) {
+          setUser({
+            email: session.user.email || "",
+            user_metadata: session.user.user_metadata,
+          });
+        } else {
+          setUser(null);
+        }
       }
-    });
+    ).data;
 
     // Verificar si hay una sesión activa
     const checkUser = async () => {

@@ -9,7 +9,7 @@ import MainLayout from "../../components/layout/MainLayout";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const { login } = useAuth();
@@ -17,7 +17,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setErrorMessage("");
     setIsLoading(true);
 
     try {
@@ -25,10 +25,10 @@ export default function LoginPage() {
       if (result.success) {
         router.push("/");
       } else {
-        setError(result.error || "Error al iniciar sesión");
+        setErrorMessage(result.error || "Error al iniciar sesión");
       }
     } catch (err) {
-      setError("Ocurrió un error al iniciar sesión");
+      setErrorMessage("Ocurrió un error al iniciar sesión");
     } finally {
       setIsLoading(false);
     }
@@ -42,9 +42,9 @@ export default function LoginPage() {
             Iniciar Sesión
           </h1>
 
-          {error && (
+          {errorMessage && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-              {error}
+              {errorMessage}
             </div>
           )}
 
