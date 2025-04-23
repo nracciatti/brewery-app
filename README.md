@@ -24,43 +24,42 @@ Brewery App es una aplicación que permite a los usuarios explorar cervecerías 
 
 ## 🏗️ Estructura del proyecto
 
-brewery-app/
-  node_modules/           # Dependencias instaladas
-  src/                    # Código fuente principal
-    app/                  # Rutas y páginas (Next.js App Router)
-      brewery/[id]/       # Página de detalle de cervecería
-        page.tsx          # Componente de página de detalle
-      login/              # Página de inicio de sesión
-        page.tsx          # Componente de página de login
-      register/           # Página de registro
-        page.tsx          # Componente de página de registro
-      globals.css         # Estilos globales
-      layout.tsx          # Layout principal
-      page.tsx            # Página principal
-    components/           # Componentes reutilizables de React
-      brewery/            # Componentes relacionados con cervecerías
-      layout/             # Componentes de estructura
-      ui/                 # Componentes de interfaz de usuario
-    contexts/             # Contextos de React
-      AuthContext.tsx     # Contexto de autenticación
-    lib/                  # Utilidades y configuración
-      supabase.ts         # Cliente de Supabase
-    services/             # Servicios para lógica de negocio
-      BreweryService.ts   # Servicio para operaciones con cervecerías
-    types/                # Definiciones de tipos TypeScript
-      auth.ts             # Tipos para autenticación
-  .env.local              # Variables de entorno (no incluido en git)
-  .gitignore              # Archivos ignorados por git
-  eslint.config.mjs       # Configuración de ESLint
-  next-env.d.ts           # Tipos para Next.js
-  next.config.ts          # Configuración de Next.js
-  package-lock.json       # Versiones exactas de dependencias
-  package.json            # Dependencias y scripts
-  postcss.config.js       # Configuración de PostCSS
-  README.md               # Este archivo
-  tailwind.config.js      # Configuración de Tailwind CSS
-  tsconfig.json           # Configuración de TypeScript
-\`\`\`
+- **brewery-app/** - Directorio raíz
+  - **node_modules/** - Dependencias instaladas
+  - **src/** - Código fuente principal
+    - **app/** - Rutas y páginas (Next.js App Router)
+      - **brewery/[id]/** - Página de detalle de cervecería
+        - **page.tsx** - Componente de página de detalle
+      - **login/** - Página de inicio de sesión
+        - **page.tsx** - Componente de página de login
+      - **register/** - Página de registro
+        - **page.tsx** - Componente de página de registro
+      - **globals.css** - Estilos globales
+      - **layout.tsx** - Layout principal
+      - **page.tsx** - Página principal
+    - **components/** - Componentes reutilizables de React
+      - **brewery/** - Componentes relacionados con cervecerías
+      - **layout/** - Componentes de estructura
+      - **ui/** - Componentes de interfaz de usuario
+    - **contexts/** - Contextos de React
+      - **AuthContext.tsx** - Contexto de autenticación
+    - **lib/** - Utilidades y configuración
+      - **supabase.ts** - Cliente de Supabase
+    - **services/** - Servicios para lógica de negocio
+      - **BreweryService.ts** - Servicio para operaciones con cervecerías
+    - **types/** - Definiciones de tipos TypeScript
+      - **auth.ts** - Tipos para autenticación
+  - **.env.local** - Variables de entorno (no incluido en git)
+  - **.gitignore** - Archivos ignorados por git
+  - **eslint.config.mjs** - Configuración de ESLint
+  - **next-env.d.ts** - Tipos para Next.js
+  - **next.config.ts** - Configuración de Next.js
+  - **package-lock.json** - Versiones exactas de dependencias
+  - **package.json** - Dependencias y scripts
+  - **postcss.config.js** - Configuración de PostCSS
+  - **README.md** - Este archivo
+  - **tailwind.config.js** - Configuración de Tailwind CSS
+  - **tsconfig.json** - Configuración de TypeScript
 
 ## 🔧 Instalación y configuración
 
