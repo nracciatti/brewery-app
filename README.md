@@ -6,7 +6,7 @@ Aplicación web para explorar y descubrir cervecerías, desarrollada como parte 
 
 Brewery App es una aplicación que permite a los usuarios explorar cervecerías y ver sus detalles. La aplicación incluye un sistema de autenticación de usuarios, navegación entre páginas, y una interfaz adaptable para dispositivos móviles y de escritorio.
 
-## 🚀 Características
+Características
 
 - **Exploración de cervecerías**: Listado de cervecerías con información básica
 - **Vista detallada**: Página individual para cada cervecería con información completa
@@ -14,7 +14,7 @@ Brewery App es una aplicación que permite a los usuarios explorar cervecerías 
 - **Diseño responsive**: Adaptado para móviles y escritorio
 - **Navegación intuitiva**: Barra de navegación inferior
 
-## 🛠️ Tecnologías utilizadas
+Tecnologías utilizadas
 
 - **React 18** (Biblioteca principal para la interfaz de usuario)
 - **Next.js 13+** (Framework React con App Router)
@@ -22,7 +22,7 @@ Brewery App es una aplicación que permite a los usuarios explorar cervecerías 
 - **Tailwind CSS** (Framework CSS utilitario)
 - **Supabase** (Autenticación y base de datos)
 
-## 🏗️ Estructura del proyecto
+## Estructura del proyecto
 
 - **brewery-app/** - Directorio raíz
   - **node_modules/** - Dependencias instaladas
@@ -61,7 +61,7 @@ Brewery App es una aplicación que permite a los usuarios explorar cervecerías 
   - **tailwind.config.js** - Configuración de Tailwind CSS
   - **tsconfig.json** - Configuración de TypeScript
 
-## 🔧 Instalación y configuración
+## Instalación y configuración
 
 ### Requisitos previos
 
